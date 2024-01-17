@@ -1,0 +1,22 @@
+# Declara os parâmetros
+ip_switch="172.22.1.247"
+porta_switch="interface Gigabitethernet 0/0/14"
+porta_ssh="2131"
+usuario="admin"
+senha="csnhA2021"
+
+# Conecta ao switch
+ssh -p $porta_ssh $usuario@$ip_switch
+
+
+# Recebe os parâmetros do sistema
+ip_switch=$1
+porta_switch=$2
+
+# Habilita a porta
+
+acessarInterface= "$porta_switch"
+comando= "undo shutdown"
+echo "sys"
+echo "acessarInterface"
+echo "$comando"
